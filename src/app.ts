@@ -1,11 +1,12 @@
 import express from "express";
-import todoRoutes from "./routes/todos"
-
+import todoRoutes from "./routes/todos.route"
 
 
 const app = express()
 
 app.use("/todos", todoRoutes)
+
+app.use(express.json());
 
 
 // Error handling middleware
